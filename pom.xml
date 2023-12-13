@@ -36,7 +36,19 @@
     </profile>
 </profiles>
 
-
+	<distributionManagement>
+<repository>
+   <id>maven-releases</id>
+   <!-- CHANGE HERE by your team nexus server -->
+   <url>http://54.176.244.235:8081/repository/maven-releases/</url>
+</repository>
+<snapshotRepository>
+  <id>maven-snapshots</id>
+  <!-- CHANGE HERE by your team nexus server -->
+  <url>http://54.176.244.235:8081/repository/maven-snapshots/</url>
+</snapshotRepository>
+</distributionManagement>
+	
     <dependencies>
         <dependency>
             <groupId>org.springframework</groupId>
@@ -181,5 +193,12 @@
       <id>${NEXUS-GRP-REPO}</id>
       <url>http://${NEXUSIP}:${NEXUSPORT}/repository/${NEXUS-GRP-REPO}/</url>
     </repository>
+
+<repository>
+      <id>maven-releases</id>
+      <name>maven-releases</name>
+      <url>http://54.176.244.235:8081/repository/maven-releases/</url>
+    </repository>
+		
   </repositories>
 </project>
